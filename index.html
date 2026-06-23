@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Aprenda com Diversão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <h1>🎓 Aprenda com Diversão</h1>
+        <p>Um site de aprendizagem para crianças</p>
+    </header>
+
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu-principal">
+        <button class="menu-btn" onclick="abrirDisciplina('inicio')">
+            🏠 Início
+        </button>
+        <button class="menu-btn" onclick="abrirDisciplina('matematica')">
+            🔢 Matemática
+        </button>
+        <button class="menu-btn" onclick="abrirDisciplina('portugues')">
+            📚 Português
+        </button>
+        <button class="menu-btn" onclick="abrirDisciplina('ciencias')">
+            🔬 Ciências
+        </button>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+        <!-- PÁGINA DE BOAS-VINDAS -->
+        <section id="inicio" class="pagina ativa">
+            <div class="caixa-boas-vindas">
+                <h2>Bem-vindo! 👋</h2>
+                <p>Escolha uma disciplina no menu acima para começar a aprender!</p>
+                <div class="emojis-animados">
+                    <span>😊</span>
+                    <span>🎉</span>
+                    <span>⭐</span>
+                    <span>🚀</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCIPLINA: MATEMÁTICA -->
+        <section id="matematica" class="pagina">
+            <h2>🔢 Matemática</h2>
+            <div class="conteudo-disciplina">
+                <div class="card-aula">
+                    <h3>📖 Multiplicação</h3>
+                    <p>Aprenda a multiplicar números de forma divertida!</p>
+                    <button onclick="iniciarQuiz('multiplicacao')">Fazer Quiz</button>
+                </div>
+                <div class="card-aula">
+                    <h3>📖 Divisão</h3>
+                    <p>Entenda como dividir e repartir quantidades.</p>
+                    <button onclick="iniciarQuiz('divisao')">Fazer Quiz</button>
+                </div>
+                <div class="card-aula">
+                    <h3>📖 Frações</h3>
+                    <p>Descobra o mundo das frações com exemplos do dia a dia!</p>
+                    <button onclick="iniciarQuiz('fracoes')">Fazer Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCIPLINA: PORTUGUÊS -->
+        <section id="portugues" class="pagina">
+            <h2>📚 Português</h2>
+            <div class="conteudo-disciplina">
+                <div class="card-aula">
+                    <h3>📖 Verbos</h3>
+                    <p>Palavras de ação! Aprenda como identificar e usar verbos.</p>
+                    <button onclick="iniciarQuiz('verbos')">Fazer Quiz</button>
+                </div>
+                <div class="card-aula">
+                    <h3>📖 Pontuação</h3>
+                    <p>Pontos, vírgulas e exclamações: descubra quando usá-los!</p>
+                    <button onclick="iniciarQuiz('pontuacao')">Fazer Quiz</button>
+                </div>
+                <div class="card-aula">
+                    <h3>📖 Ortografia</h3>
+                    <p>Escreva corretamente as palavras mais comuns.</p>
+                    <button onclick="iniciarQuiz('ortografia')">Fazer Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCIPLINA: CIÊNCIAS -->
+        <section id="ciencias" class="pagina">
+            <h2>🔬 Ciências</h2>
+            <div class="conteudo-disciplina">
+                <div class="card-aula">
+                    <h3>📖 Sistema Solar</h3>
+                    <p>Conheça os planetas e o espaço! 🌍🪐</p>
+                    <button onclick="iniciarQuiz('solar')">Fazer Quiz</button>
+                </div>
+                <div class="card-aula">
+                    <h3>📖 Corpo Humano</h3>
+                    <p>Descubra como funciona seu corpo incrível!</p>
+                    <button onclick="iniciarQuiz('corpo')">Fazer Quiz</button>
+                </div>
+                <div class="card-aula">
+                    <h3>📖 Animais</h3>
+                    <p>Aprenda sobre os animais incríveis do mundo!</p>
+                    <button onclick="iniciarQuiz('animais')">Fazer Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÁREA DE QUIZ -->
+        <section id="quiz-area" class="pagina">
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <p>Pergunta <span id="pergunta-numero">1</span> de <span id="total-perguntas">5</span></p>
+                    <div class="barra-progresso">
+                        <div id="barra-preenchida" class="barra-preenchida"></div>
+                    </div>
+                </div>
+
+                <div class="quiz-conteudo">
+                    <h3 id="pergunta-texto">Qual é a resposta?</h3>
+                    <div id="opcoes-quiz" class="opcoes-quiz">
+                        <!-- Opções geradas por JavaScript -->
+                    </div>
+                </div>
+
+                <div class="quiz-resultado" id="quiz-resultado" style="display: none;">
+                    <h3 id="resultado-texto">Parabéns!</h3>
+                    <p id="resultado-mensagem"></p>
+                    <button onclick="abrirDisciplina('inicio')">Voltar ao Início</button>
+                </div>
+
+                <div class="quiz-pontuacao">
+                    <p>Pontuação: <strong id="pontuacao">0</strong>/100</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <p>🎓 Aprenda com Diversão © 2024 - Feito com ❤️ para educação</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
