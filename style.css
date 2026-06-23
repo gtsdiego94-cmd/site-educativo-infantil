@@ -389,4 +389,10 @@ body {
         font-size: 2em;
         gap: 10px;
     }
+}.pagina {
+    display: none;
+}
+
+.pagina.ativa {
+    display: block;
 }
