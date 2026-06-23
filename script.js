@@ -102,6 +102,9 @@ function iniciarQuiz(tipo) {
     perguntaAtual = 0;
     pontuacao = 0;
 
+    document.getElementById("quiz-conteudo").style.display = "block";
+    document.getElementById("quiz-resultado").style.display = "none";
+
     abrirDisciplina("quiz-area");
     mostrarPergunta();
 }
